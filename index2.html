@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="style2.css">
+  <title>Registration</title>
+</head>
+<body>
+  <div class="container">
+    <div class="title">Registration</div>
+    <div class="position-details">
+      <input type="radio" name="userType" value="teacher" id="dot-1" onchange="toggleFields()">
+      <input type="radio" name="userType" value="student" id="dot-2" onchange="toggleFields()">
+      <div class="category">
+        <label for="dot-1">
+          <span class="dot one"></span>
+          <span class="position">Teacher</span>
+        </label>
+        <label for="dot-2">
+          <span class="dot two"></span>
+          <span class="position">Student</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="content">
+      <form action="#" class="user-form">
+        <div class="user-details">
+          <div id="teacherFields" class="form-fields">
+            <div class="input-box">
+              <span class="details">Full Name</span>
+              <input type="text" placeholder="Enter your full name" required>
+            </div>
+            <div class="input-box">
+              <span class="details">Email</span>
+              <input type="text" placeholder="Enter your email">
+            </div>
+            <div class="input-box">
+              <span class="details">Teacher code</span>
+              <input type="text" placeholder="Enter your teacher code">
+            </div>
+            <div class="input-box">
+              <span class="details">Password</span>
+              <input type="password" placeholder="Enter your password">
+            </div>
+          </div>
+
+          <div id="studentFields" class="form-fields hidden">
+            <div class="input-box">
+              <span class="details">Full Name</span>
+              <input type="text" name="fullname" placeholder="Full name">
+            </div>
+            <div class="input-box">
+              <span class="details">Email</span>
+              <input type="text" name="email" placeholder="Email">
+            </div>
+            <div class="input-box">
+              <span class="details">Password</span>
+              <input type="password" name="password" placeholder="Password">
+            </div>
+          </div>
+        </div>
+
+        <div class="button">
+          <input type="submit" value="Register">
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    function toggleFields() {
+      var teacherFields = document.getElementById("teacherFields");
+      var studentFields = document.getElementById("studentFields");
+      var userType = document.querySelector('input[name="userType"]:checked').value;
+      
+      if (userType === "teacher") {
+        teacherFields.classList.remove("hidden");
+        studentFields.classList.add("hidden");
+      } else {
+        teacherFields.classList.add("hidden");
+        studentFields.classList.remove("hidden");
+      }
+    }
+  </script>
+</body>
+</html>
