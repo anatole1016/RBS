@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+
+
+
+  
+body, h1, h2, p, table {
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  body {
+    
+    background-color: #f2f2f2;
+  }
+  
+  
+  .navbar {
+    background-color: #0A3055;
+    padding: 10px;  
+    color: #fff;
+    
+
+  }
+  .navbar2 {
+    background-color: #3C89A3;
+    padding: 10px;
+    color: #fff;
+  }
+  
+  
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0A3055;
+  }
+  
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  
+  th {
+    background-color:#E6E6E6;
+    color: #fff;
+    padding: 10px;
+  }
+  
+ 
+  td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+  
+
+  .rprop1 {
+    background-color: #E6E6E6;
+    border-left: black; opacity: 80%;
+  }
+
+  .rprop1:hover { 
+    opacity: 0.10;
+  }
+  
+  .rprop2 {
+    background-color: #E6E6E6;
+   
+  }
+  .rprop2:hover {
+    opacity: 0.10;
+  }
+ 
+  .rooms {
+    
+    background: #C8DCE4;
+  }
+  
+
+
+  .popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+/* Your existing styles */
+
+/* Add media queries for responsiveness */
+
+/* For tablets and smaller screens */
+@media (max-width: 1024px) {
+  .container {
+      padding: 10px;
+  }
+
+  h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+  }
+
+  th, td {
+      font-size: 14px;
+      padding: 5px;
+  }
+
+  .navbar, .navbar2 {
+      padding: 5px;
+      display: flex;
+      justify-content: center;
+  }
+
+  .nav-links {
+      list-style: none;
+      display: flex;
+  }
+
+  .nav-links li {
+      margin-right: 20px;
+  }
+
+  .nav-links li:last-child {
+      margin-right: 0;
+  }
+}
+
+/* For smartphones and smaller screens */
+@media (max-width: 860px) {
+  h1 {
+      font-size: 20px;
+  }
+
+  th, td {
+      font-size: 12px;
+      padding: 3px;
+  }
+
+  .navbar, .navbar2 {
+      padding: 5px;
+      display: flex;
+      justify-content: center;
+      width: 525px;
+  }
+
+  .nav-links {
+      list-style: none;
+      display: flex;
+  }
+
+  .nav-links li {
+      margin-right: 20px;
+  }
+
+  .nav-links li:last-child {
+      margin-right: 0;
+  }
+}
